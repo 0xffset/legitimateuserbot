@@ -2,5 +2,9 @@
 {
     "token": "",
     "master": [""],
-    "masterServer": ""
+    "masterServer": "",
+    "hostDB": "",
+    "userDB": "",
+    "passwordDB": "",
+    "schemeDB": ""
 }

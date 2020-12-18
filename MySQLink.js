@@ -10,12 +10,12 @@ class MySQLink {
 
     con;
 
-    constructor(_host, _user, _password, _datapase, _multipleStatements) {
+    constructor(_host, _user, _password, _database) {
         this.host = _host;
         this.user = _user;
         this.password = _password;
-        this.database = _datapase;
-        this.multipleStatements = _multipleStatements;
+        this.database = _database;
+        this.multipleStatements = true;
 
         this.con = mysql.createConnection({
             host: this.host,

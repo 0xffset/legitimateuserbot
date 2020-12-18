@@ -5,7 +5,7 @@ const BotClass = require("./Bot");
 const processEntry = require("./processEntry");
 const MySQLink = require("./MySQLink");
 
-const Bot = new BotClass.Bot(new MySQLink.MySQLink("localhost", "root", "", "discordbot", true), botconfig.token);
+const Bot = new BotClass.Bot(new MySQLink.MySQLink(botconfig.hostDB, botconfig.userDB, botconfig.passwordDB, botconfig.schemeDB), botconfig.token);
 
 
 const commandDir = fs.readdirSync('Commands').map(entry => {
