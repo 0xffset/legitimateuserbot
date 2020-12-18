@@ -1,13 +1,27 @@
 const Discord = require("discord.js");
 
-module.exports = {
-    "client": new Discord.Client(),
-    "commands": {},
-    "prefix": "",
-    assertCommand,
+
+class Bot {
+    commands = {};
+    prefixCache = {};
+    mysqlink;
+    botToken;
+    client;
+
+    constructor(_mysqlink, _token) {
+        this.mysqlink = _mysqlink;
+        this.botToken = _token;
+
+        this.client = new Discord.Client();
+    }
+
+    addCommand(_command) {
+        this.commands[_command.name] = _command.obj;
+    }
+
+    startBot() {
+        this.client.login(this.botToken);
+    }
 }
 
-function assertCommand(command, message) {
-    if (this.commands[command] != undefined)
-        this.commands[command].run(message, message.content.split(" ").slice(1), this);
-}
+exports.Bot = Bot;
