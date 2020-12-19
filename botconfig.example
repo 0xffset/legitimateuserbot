@@ -1,10 +1,10 @@
-// rename to .json
+// rename to .json and remove comments
 {
-    "token": "",
-    "master": [""],
-    "masterServer": "",
-    "hostDB": "",
-    "userDB": "",
-    "passwordDB": "",
-    "schemeDB": ""
+    "token": "", // bot token
+    "master": [""], // array with IDs of bot masters
+    "masterServer": "", // master dev server of the bot (has no use yet)
+    "hostDB": "", // host address of your db
+    "userDB": "", // username of your db
+    "passwordDB": "", // password of your dn
+    "schemeDB": "" // scheme name
 }
